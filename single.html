@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Gaussim</title>
+      <!--favicon-img--> 
+   <link rel="icon" type="image/png" href="images/favicon.png">
+   <!--favicon-img-->
+  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css" integrity="sha256-DBYdrj7BxKM3slMeqBVWX2otx7x4eqoHRJCsSDJ0Nxw=" crossorigin="anonymous"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  </head>
+
+  <body>
+
+    <div id="all">
+  <div id="preloader">
+    <div class="p">Gaussim</div>
+</div>
+<div id="breaker"></div>
+
+      <div class="cursor scale"></div>
+      <div class="cursor-two  scale"></div>
+
+      <!-- HOME -->
+    
+      <!-- HOME -->
+ 
+      <!-- PROJECTS -->
+      <div id="projects">
+
+        <!-- MARINE PROJECT -->
+        <div class="project marine-project">
+          <div class="navigation">
+        
+            <div class="logo home-link fade-down">
+             <a href="index.html">Gaussim</a>
+            </div>
+          
+            <div class="navigation-links">
+              <ul>
+                <li class="links about-link fade-down"><a href="about.html">About</a></li>
+                <li class="links contact-link fade-down"><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+          
+          </div>
+
+          <div class="col-12 p-0 m-0">
+           <div class="slideshow-container">
+              <div class="slides">
+              <img src="images/header-image-one.webp" alt="marine-image">
+           </div>
+           <div class="slides">
+            <img src="images/image-three.webp" alt="marine-image">
+          </div>
+           <div class="slides">
+             <img src="images/image-six.webp" alt="marine-image">
+           </div>
+           <div class="slides">
+             <img src="images/image-five.webp" alt="marine-image">
+           </div>
+           <div class="slides">
+             <img src="images/image-two.webp" alt="marine-image">
+           </div>
+         </div>
+        
+         </div>
+         <div class="controls">
+          <button id ="prev" class="hover"><img src="images/prev.png" alt="" class="imgs"></button>
+          <button id ="next" class="hover"><img src="images/next.png" alt="" class="imgs"></button>
+        </div>
+        <div class="project-name">
+          <span style="opacity: 5%;">SEA PHOTO</span>
+        </div>
+        <div class="social-media-links opacity">
+          <ul>
+            <li class="fade-up"> <a href="#"><i class='bx bxl-facebook'></i></a> </li>
+            <li class="fade-up"> <a href="#"><i class='bx bxl-instagram'></i></a> </li>
+            <li class="fade-up"><a href="#"><i class='bx bxl-telegram' ></i></a> </li>
+          </ul>
+        </div>
+        </div>
+<!-- MARINE PROJECT -->
+
+
+      </div>
+      <!-- PROJECTS -->
+ 
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js" integrity="sha256-4sETKhh3aSyi6NRiA+qunPaTawqSMDQca/xLWu27Hg4=" crossorigin="anonymous"
+    ></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bez.js"></script>
+    <script src="js/pace.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+
+    //marine-slideshow
+    $(function(){
+    var slide_index = 1;  
+    displaySlides(slide_index);  
+    function nextSlide() {  
+        displaySlides(slide_index++);  
+    }  
+    function prevslide() {  
+      displaySlides(slide_index--);   
+    }  
+    function displaySlides() {  
+        var i;  
+        var slides = document.getElementsByClassName("slides");  
+        if (slide_index > slides.length ) { slide_index = 1 } 
+        if (slide_index < 1) { slide_index = slides.length }  
+        for (i = 0; i < slides.length; i++) {  
+            slides[i].style.opacity = 0;  
+           
+        }  
+        slides[slide_index - 1].style.opacity = 1;  
+         
+      }
+      var next = document.getElementById('next');
+      next.addEventListener('click',nextSlide);
+
+      var prev = document.getElementById('prev');
+      prev.addEventListener('click',prevslide);
+  })
+
+    </script>
+
+    
+  </body>
+</html>
