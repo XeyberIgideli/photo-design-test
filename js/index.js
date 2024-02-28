@@ -204,18 +204,9 @@ new Swiper('#projects .swiper-container', {
       gsap.from('.contact-opacity',1,{opacity:0,delay:1.6,stagger:.2})
     })
      $('.home-link').on('click',function(){
-      gsap.to('.city-project',.5,{scale:.9});
-      gsap.to('.city-project',0,{width:'100%',height:'100vh',overflow:'hidden'});
-      gsap.to('.city-project',0,{display:'none',delay:.7});
-      gsap.to('.wildlife-project',.5,{scale:.9});
-      gsap.to('.wildlife-project',0,{width:'100%',height:'100vh',overflow:'hidden'});
-      gsap.to('.wildlife-project',0,{display:'none',delay:.7});
-      gsap.to('.forest-project',.5,{scale:.9});
-      gsap.to('.forest-project',0,{width:'100%',height:'100vh',overflow:'hidden'});
-      gsap.to('.forest-project',0,{display:'none',delay:.7});
-      gsap.to('.marine-project',.5,{scale:.9});
-      gsap.to('.marine-project',0,{width:'100%',height:'100vh',overflow:'hidden'});
-      gsap.to('.marine-project',0,{display:'none',delay:.7});
+      gsap.to('.project',.5,{scale:.9});
+      gsap.to('.project',0,{width:'100%',height:'100vh',overflow:'hidden'});
+      gsap.to('.project',0,{display:'none',delay:.7});
       gsap.to('#about',.5,{scale:.9});
       gsap.to('#about',0,{width:'100%',height:'100vh',overflow:'hidden'});
       gsap.to('#about',0,{display:'none',delay:.7});
